@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 6</title>
+</head>
+<body>
+
+    <div style="text-align: center; font-family:sans-serif;">
+        <h2>f(x) = x + x/2 + x/4 + x/8</h2>
+        <input type="text" placeholder="Enter the value of x" id='x'></input><br><br>
+        <button onclick="compute()"> COMPUTE </button><br><br>
+        <input type="text" id='res' readonly></input><br><br>
+    </div>    
+</body>
+<script type="text/javascript">
+    function compute(){
+        let x = +document.getElementById('x').value;
+        document.getElementById("res").value = x + x/2 + x/4 + x/8;
+    }
+</script>
+</html>

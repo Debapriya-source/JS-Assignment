@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 4</title>
+</head>
+
+<body>
+    <div style="text-align: center; font-family:sans-serif;">
+        <h2>Count vowels in your string</h2>
+        <input type="text" placeholder="Enter a string" id='str'></input><br><br>
+        <button onclick="countVowels()"> count </button><br><br>
+        <input type="text" id='res' readonly></input><br><br>
+    </div>
+</body>
+
+<script type="text/javascript">
+    function countVowels() {
+        let str = document.getElementById("str").value;
+        let vowels = 0;
+        for (let i = 0; i < str.length; i++)
+            if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u' || str[i] == 'A' || str[i] == 'E' || str[i] == 'I' || str[i] == 'O' || str[i] == 'U')
+                vowels++;
+        document.getElementById("res").value = vowels;
+    }
+</script>
+
+</html>
