@@ -45,9 +45,11 @@ button:hover {
   box-shadow: 0px 0px 1px rgba(0, 255, 255, 0.7);
 }
 @media screen and (max-width: 768px) {
-  * {
-    font-size: 90%;
+  div {
+    margin: 10rem auto 0;
+    width: 90%;
   }
+
   input[type="text"],
   input[type="number"] {
     width: 50%;
