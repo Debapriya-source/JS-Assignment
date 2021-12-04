@@ -4,7 +4,8 @@ h2 {
 body {
   background-color: black;
 }
-input[type="text"] {
+input[type="text"],
+input[type="number"] {
   background-color: rgb(252, 255, 233);
   padding: 0.3rem 1rem 0.3rem;
   width: 20rem;
