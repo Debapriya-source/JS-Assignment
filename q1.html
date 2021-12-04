@@ -43,7 +43,7 @@
     setInterval(updateClock, 1000);
     function updateClock() {
         let date = new Date();
-        document.getElementById("cdate").innerHTML = date.getDate() + '-' + (date.getMonth() + 1) + '-' + date.getFullYear();
+        document.getElementById("cdate").innerHTML = date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear();
         document.getElementById("ctime").innerHTML = date.toLocaleTimeString();
     }
     updateClock();
