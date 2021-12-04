@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 7</title>
+</head>
+
+<body>
+    <div style="text-align: center; font-family:sans-serif;">
+        <h2>Change cases of the input string</h2>
+        <input type="text" placeholder="Enter a string" id='str'></input><br><br>
+        <button onclick="changeStr()"> COMPUTE </button><br><br>
+        <input type="text" id='res' readonly></input><br><br>
+    </div>
+</body>
+<script type="text/javascript">
+    function changeStr() {
+        let str = document.getElementById("str").value;
+        let newStr = "";
+        for (let i = 0; i < str.length; i++) {
+            if (str[i] === str[i].toLowerCase())
+                newStr += str[i].toUpperCase();
+            else
+                newStr += str[i].toLowerCase();
+        }
+        document.getElementById("res").value = newStr;
+    }
+</script>
+
+</html>
