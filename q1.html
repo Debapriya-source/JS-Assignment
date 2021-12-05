@@ -9,17 +9,17 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <style type="text/css">
-    *{
-        color: rgb(0, 255, 0);
-    }
     @font-face {
         font-family: 'digitaldream';
         src: url('digital-dream.regular.ttf') format('truetype');
     }
+    *{
+        color: rgb(0, 255, 0);
+        font-family: 'digitaldream';
+    }
 
     h2 {
         text-shadow: 0px 0px 17px rgba(60, 255, 0, 0.945);
-        font-family: digitaldream;
     }
 
     @media screen and (max-width: 768px) {
@@ -35,7 +35,7 @@
 </style>
 
 <body>
-    <h1 style="text-align: center; padding-top: 3em; font-family: Georgia, 'Times New Roman', Times, serif;">Digital Clock</h1>
+    <h1 style="text-align: center; padding-top: 3em; font-family:Georgia, 'Times New Roman', Times, serif; font-weight: 100;">Digital Clock</h1>
     <div style="background-color: black; margin-top: 7em;">
         <h2 style="text-align:center; padding-top: 1em;" id='cdate'></h2>
         <p style="text-align:center;font-size:x-small;"><span id='ctime'></span></p>
@@ -46,7 +46,7 @@
     setInterval(updateClock, 1000);
     function updateClock() {
         let date = new Date();
-        document.getElementById("ctime").innerHTML = date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear();
+        document.getElementById("ctime").innerHTML = date.getDate() + '-' + (date.getMonth() + 1) + '-' + date.getFullYear();
         document.getElementById("cdate").innerHTML = date.toLocaleTimeString();
     }
     updateClock();
