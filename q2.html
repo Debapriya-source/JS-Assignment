@@ -11,27 +11,32 @@
     <div style="text-align: center;">
     <h2 >Calculator</h2>
     <input type="number" id = 'fnum' placeholder="Enter first number"></input><br><br>
-    <button onclick="add();"> + </button>
-    <button onclick="sub();"> - </button>
-    <button onclick="mult();"> x </button>
-    <button onclick="divide();"> / </button><br><br>
+    <p id="operator"></p>
     <input type="number" id = 'lnum' placeholder="Enter second number"></input><br><br>
-    <button> = </button><br><br>
-    <input type="number" id = 'res' readonly></input><br><br>
+    <button onclick="add();"> ➕ </button>
+    <button onclick="sub();"> ➖ </button>
+    <button onclick="mult();"> ✖️ </button>
+    <button onclick="divide();"> ➗ </button><br><br>
+    <label>=</label>
+    <input type="number" placeholder="Result" id = 'res' readonly></input><br><br>
 </body>
 <script type="text/javascript">
 function add(){
     document.getElementById("res").value = +document.getElementById("fnum").value + +document.getElementById("lnum").value;
+    document.getElementById("operator").innerHTML = "➕";
 }
 function sub(){
     document.getElementById("res").value = +document.getElementById("fnum").value - +document.getElementById("lnum").value;
+    document.getElementById("operator").innerHTML = "➖";
 }
 function mult(){
     document.getElementById("res").value = +document.getElementById("fnum").value * +document.getElementById("lnum").value;
+    document.getElementById("operator").innerHTML = "✖️";
 }
 
 function divide(){
     document.getElementById("res").value = +document.getElementById("fnum").value / +document.getElementById("lnum").value;
+    document.getElementById("operator").innerHTML = "➗";
 }
 </script>
 </html>
